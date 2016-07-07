@@ -33,9 +33,11 @@ function_message_title '- **Install Docker**'
 curl -sSL https://get.docker.com/ | sudo sh
 
 # add my user to docker group
+function_message_title '- **add my user to docker group**'
 sudo gpasswd -a ${IUSER} docker
 
 # restart docker
+function_message_title '- **Restart Docker**'
 sudo service docker restart
 
 # tell the current terminal about the new docker group changes

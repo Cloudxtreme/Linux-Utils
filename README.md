@@ -112,6 +112,12 @@ $ wget -O xw  https://git.io/vKYsd && chmod +x xw && ./xw && rm xw
 - Viewnior
 - Nemo Rabbitvcs
 
+##### Install Docker
+
+```bash
+$ wget -O xw  https://git.io/vKYCx && chmod +x xw && ./xw && rm xw
+```
+
 ##### Install Nodejs
 
 ```bash
