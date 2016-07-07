@@ -26,13 +26,14 @@ function_check_intall () {
 
 SCRIPT_PATH=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
+IUSER=$(whoami)
 
 # install docker
 function_message_title '- **Install Docker**'
 curl -sSL https://get.docker.com/ | sudo sh
 
 # add my user to docker group
-sudo gpasswd -a ${USER} docker
+sudo gpasswd -a ${IUSER} docker
 
 # restart docker
 sudo service docker restart
