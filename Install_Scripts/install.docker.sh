@@ -42,8 +42,8 @@ sudo service docker restart
 
 # Install Docker Compose
 function_message_title '- **Install Docker Compose**'
-sudo apt install python-pip
-sudo pip install docker-compose
+sudo apt install -y python-pip
+sudo pip install -y docker-compose
 
 function_check_intall docker
 function_check_intall docker-compose
