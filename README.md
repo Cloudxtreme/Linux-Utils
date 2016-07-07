@@ -20,7 +20,7 @@ Collection of scripts to install some essential programs.
 ##### Install Basics
 
 ```bash
-$ wget -O xw  http://git.io/Dncnzw && chmod +x xw && ./xw && rm xw
+$ wget -O xw  https://git.io/vKYOP && chmod +x xw && ./xw && rm xw
 ```
 
 - software-properties-common
@@ -36,7 +36,7 @@ $ wget -O xw  http://git.io/Dncnzw && chmod +x xw && ./xw && rm xw
 ##### Install Eessentials
 
 ```bash
-$ wget -O xw  http://git.io/-BDg8Q && chmod +x xw && ./xw && rm xw
+$ wget -O xw  https://git.io/vKY3A && chmod +x xw && ./xw && rm xw
 ```
 
 - Essential tools for compiling from sources
@@ -49,7 +49,7 @@ $ wget -O xw  http://git.io/-BDg8Q && chmod +x xw && ./xw && rm xw
 ##### Install ZSH
 
 ```bash
-$ wget -O xw  http://git.io/UBJMHQ && chmod +x xw && ./xw && rm xw
+$ wget -O xw  https://git.io/vKYsm && chmod +x xw && ./xw && rm xw
 ```
 
 - zsh
@@ -59,19 +59,19 @@ $ wget -O xw  http://git.io/UBJMHQ && chmod +x xw && ./xw && rm xw
 ##### Install Alias
 
 ```bash
-$ wget -O xw  http://git.io/vkcDn && chmod +x xw && ./xw && rm xw
+$ wget -O xw  https://git.io/vKYss && chmod +x xw && ./xw && rm xw
 ```
 
 ##### Install Stars
 
 ```bash
-$ wget -O xw  http://git.io/vkvq9 && chmod +x xw && ./xw && rm xw
+$ wget -O xw  https://git.io/vKYsW && chmod +x xw && ./xw && rm xw
 ```
 
 ##### Install Design Tools
 
 ```bash
-$ wget -O xw  http://git.io/Nov7 && chmod +x xw && ./xw && rm xw
+$ wget -O xw  https://git.io/vKYsw && chmod +x xw && ./xw && rm xw
 ```
 
 - gPick
@@ -80,7 +80,7 @@ $ wget -O xw  http://git.io/Nov7 && chmod +x xw && ./xw && rm xw
 ##### Install Useful Tools
 
 ```bash
-$ wget -O xw  http://git.io/8yxL5Q && chmod +x xw && ./xw && rm xw
+$ wget -O xw  https://git.io/vKYsP && chmod +x xw && ./xw && rm xw
 ```
 
 - Samba
@@ -93,7 +93,7 @@ $ wget -O xw  http://git.io/8yxL5Q && chmod +x xw && ./xw && rm xw
 ##### Install Customize
 
 ```bash
-$ wget -O xw  http://git.io/h9dVjw && chmod +x xw && ./xw && rm xw
+$ wget -O xw  https://git.io/vKYsS && chmod +x xw && ./xw && rm xw
 ```
 
 - Themes Libra Flattastic
@@ -103,7 +103,7 @@ $ wget -O xw  http://git.io/h9dVjw && chmod +x xw && ./xw && rm xw
 ##### Install Extras
 
 ```bash
-$ wget -O xw  http://git.io/OBOaLQ && chmod +x xw && ./xw && rm xw
+$ wget -O xw  https://git.io/vKYsd && chmod +x xw && ./xw && rm xw
 ```
 
 - Pyrenamer
@@ -115,7 +115,7 @@ $ wget -O xw  http://git.io/OBOaLQ && chmod +x xw && ./xw && rm xw
 ##### Install Nodejs
 
 ```bash
-$ wget -O xw  http://git.io/R7LgJg && chmod +x xw && ./xw && rm xw
+$ wget -O xw  https://git.io/vKYG9 && chmod +x xw && ./xw && rm xw
 ```
 
 - Nodejs
@@ -124,31 +124,31 @@ $ wget -O xw  http://git.io/R7LgJg && chmod +x xw && ./xw && rm xw
 ##### Install Python
 
 ```bash
-$ wget -O xw  http://git.io/S63sLQ && chmod +x xw && ./xw && rm xw
+$ wget -O xw  https://git.io/vKYGb && chmod +x xw && ./xw && rm xw
 ```
 
 ##### Install Ruby
 
 ```bash
-$ wget -O xw  http://git.io/ZFV0PA && chmod +x xw && ./xw && rm xw
+$ wget -O xw  https://git.io/vKYZT && chmod +x xw && ./xw && rm xw
 ```
 
 ##### Install Ruby 2.2.1
 
 ```bash
-$ wget -O xw  http://git.io/vvNB7 && chmod +x xw && ./xw && rm xw
+$ wget -O xw  https://git.io/vKYZI && chmod +x xw && ./xw && rm xw
 ```
 
 ##### Install Syncthing
 
 ```bash
-$ wget -O xw  http://git.io/vkep4 && chmod +x xw && ./xw && rm xw
+$ wget -O xw  https://git.io/vKYZY && chmod +x xw && ./xw && rm xw
 ```
 
 ##### Install LAMP
 
 ```bash
-$ wget -O xw  http://git.io/83F6CQ && chmod +x xw && ./xw && rm xw
+$ wget -O xw  https://git.io/vKYZR && chmod +x xw && ./xw && rm xw
 ```
 
 - apache2
@@ -179,19 +179,19 @@ $ wget -O xw  http://git.io/83F6CQ && chmod +x xw && ./xw && rm xw
 ##### Fix Locale
 
 ```bash
-$ wget -O xw  http://git.io/vYshc && chmod +x xw && ./xw && rm xw
+$ wget -O xw  https://git.io/vKYZi && chmod +x xw && ./xw && rm xw
 ```
 
 ##### Install zsh no root
 
 ```bash
-$ wget -O xw  http://git.io/D_Fw_w && chmod +x xw && ./xw && rm xw
+$ wget -O xw  https://git.io/vKYZM && chmod +x xw && ./xw && rm xw
 ```
 
 ##### Install rMate
 
 ```bash
-$ wget -O xw  http://git.io/gE58Qg && chmod +x xw && ./xw && rm xw
+$ wget -O xw  https://git.io/vKYZy && chmod +x xw && ./xw && rm xw
 ```
 
 -------------------------------------------------------------------------------
@@ -199,7 +199,7 @@ $ wget -O xw  http://git.io/gE58Qg && chmod +x xw && ./xw && rm xw
 **Note:** if you get ERROR: certificate add ```--no-check-certificate```
 
 ```bash
-$ wget --no-check-certificate -O xt  http://git.io/UBJMHQ && chmod +x xt && ./xt && rm xt
+$ wget --no-check-certificate -O xt  http://git.io/vKYOP && chmod +x xt && ./xt && rm xt
 ```
 
 
