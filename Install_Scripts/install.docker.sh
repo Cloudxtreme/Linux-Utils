@@ -40,9 +40,6 @@ sudo gpasswd -a ${IUSER} docker
 function_message_title '- **Restart Docker**'
 sudo service docker restart
 
-# tell the current terminal about the new docker group changes
-newgrp docker
-
 # Install Docker Compose
 function_message_title '- **Install Docker Compose**'
 sudo apt install python-pip
