@@ -107,7 +107,7 @@ XXXXXXXEND='# |::::::::::::: oh-my-zsh ::::::::::::::<<<' # |<=== Config This
 function_delete_beetwen "\${XXXXXBEGIN}" "\${XXXXXXXEND}" "\${FILE_ZSH}"
 
 echo "${XXXXXBEGIN}" >> $FILE_ZSH
-wget -qO- https://raw.githubusercontent.com/Mayccoll/Linux/master/files/zshrc >> $FILE_ZSH
+wget -qO- https://raw.githubusercontent.com/Mayccoll/Linux-Utils/master/Install_Files/zshrc >> $FILE_ZSH
 echo "${XXXXXXXEND}" >> $FILE_ZSH
 
 
@@ -140,7 +140,7 @@ XXXXXXXEND='# |::::::::::::: antigen ::::::::::::::<<<' # |<=== Config This
 function_delete_beetwen "\${XXXXXBEGIN}" "\${XXXXXXXEND}" "\${FILE_ZSH}"
 
 echo "${XXXXXBEGIN}" >> $FILE_ZSH
-wget -qO- https://raw.githubusercontent.com/Mayccoll/Linux/master/files/antigen.zshrc >> $FILE_ZSH
+wget -qO- https://raw.githubusercontent.com/Mayccoll/Linux-Utils/master/Install_Files/antigen.zshrc >> $FILE_ZSH
 echo "${XXXXXXXEND}" >> $FILE_ZSH
 
 
