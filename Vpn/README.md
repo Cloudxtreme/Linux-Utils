@@ -63,7 +63,7 @@ service pritunl start
 ------
 
 
-# Install OpenVpn Server
+# Install OpenVpn Server (Recommended)
 
 https://github.com/Nyr/openvpn-install
 
