@@ -9,7 +9,7 @@ This is a collection of scripts, notes and personal knowledge about Linux and di
 
 ## Linux Commands
 
-https://github.com/Mayccoll/Linux/blob/master/commands.md
+https://github.com/Mayccoll/Linux-Utils/blob/master/commands.md
 
 -----
 
