@@ -385,7 +385,7 @@
 ## Descomprimir a traves de php
 
 ```php
-    exec('tar -xzf SecretariaSalud.tar.gz',$ret);
+  exec('tar -xzf SecretariaSalud.tar.gz',$ret);
 ```
 
 ----------------------------------------------------------------------
@@ -443,3 +443,14 @@
 ```bash
     ack -l '^.*\b(SEARCH1|SEARCH2|SEARCH3)\b.*$' | xargs perl -pi -E 's/^.*\b(SEARCH1|SEARCH2|SEARCH3)\b.*$/REPLACE/g'
 ```
+
+----------------------------------------------------------------------
+
+## Remove old linux kernels safety
+
+```bash
+  #  Ubuntu 16.04 and newer, Linux Mint 18 and derivatives
+  sudo apt install -y byobu
+  sudo purge-old-kernels
+```
+
