@@ -6,6 +6,12 @@ http://www.gistboxapp.com/
 
 http://wp-cli.org/#install
 
+##### Pre:
+
+```bash
+    $ sudo apt-get install php7.0-cli
+```
+
 ```bash
     $
     curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar && \
