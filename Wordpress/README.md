@@ -176,3 +176,31 @@ endforeach;
 
 <?php endwhile; wp_reset_query();
 ```
+
+### The Loop Custom Type FIELD
+
+```php
+<?php
+    $arg = array(
+        'post_type'       => 'main_page',
+        'posts_per_page'  => -1
+    );
+    $loop = new WP_Query( $arg );
+?>
+<?php
+    while ( $loop->have_posts() ) : $loop->the_post();
+        $images = get_custom_field('img_slider_web');
+        $i = 1;
+        foreach ($images as $img) {
+            ?>
+            <div class="item<?php if ($i == 1) echo ' active'; ?>">
+            <?php
+                printf('<img src="%s"/>', $img);
+            ?>
+            </div>
+            <?php
+        $i++;
+        }
+    endwhile; wp_reset_query();
+?>
+```
