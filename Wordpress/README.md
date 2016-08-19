@@ -204,3 +204,52 @@ endforeach;
     endwhile; wp_reset_query();
 ?>
 ```
+
+### Custom Nav
+
+```php
+<?php
+/*
+ * place in function.php
+ * custom menu example @ https://digwp.com/2011/11/html-formatting-custom-menus/
+ *
+ */
+
+ function wp_custom_menu( $menu_id ) {
+ 	$menu_name = 'menu-home'; // specify custom menu slug
+ 	if (  wp_get_nav_menu_object( $menu_id ) ) {
+ 		$menu         = wp_get_nav_menu_object( $menu_id );
+ 		$menu_items   = wp_get_nav_menu_items($menu->term_id);
+
+ 		// $menu_list = "\t". '<nav>' ."\n";
+ 		// $menu_list .= "\t\t". '<ul>' ."\n";
+ 		foreach ((array) $menu_items as $key => $menu_item) {
+ 			$title         = $menu_item->title;
+             $url           = $menu_item->url;
+             $image_size    = $menu_item->image_size;
+             $image_menu    = wp_get_attachment_image($menu_item->thumbnail_id, $image_size);
+
+             $menu_list .= '<div class="col-lg-4 col-sm-6">' ."\n";
+             $menu_list .= '<a class="hovereffect" href="'. $url .'">' ."\n";
+             $menu_list .= $image_menu ."\n";
+             $menu_list .= '<div class="overlay"><h2>' . $title . '</h2></div>' ."\n";
+             $menu_list .= '</a>' ."\n";
+             $menu_list .= '</div>' ."\n";
+
+ 		}
+ 		// $menu_list .= "\t\t". '</ul>' ."\n";
+ 		// $menu_list .= "\t". '</nav>' ."\n";
+ 	} else {
+ 		// $menu_list = '<!-- no list defined -->';
+ 	}
+ 	echo $menu_list;
+ }
+
+/*
+ * Use: Menu number.
+ */
+
+ if (function_exists(wp_custom_menu(2))) wp_custom_menu(2);
+ ?>
+
+```
