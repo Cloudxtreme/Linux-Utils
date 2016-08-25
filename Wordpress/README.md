@@ -14,7 +14,7 @@ http://wp-cli.org/#install
 
 ```bash
     $
-    curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar && \
+curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar && \
     chmod +x wp-cli.phar && sudo mv wp-cli.phar /usr/local/bin/wp
 
     wp plugin install --activate all-in-one-wp-migration  admin-color-schemes
@@ -33,22 +33,6 @@ http://wp-cli.org/#install
 
 #### Esentials
 
-- [accesspress-social-icons](https://wordpress.org/plugins/accesspress-social-icons/)
-- [all-in-one-seo-pack](https://wordpress.org/plugins/all-in-one-seo-pack/)
-- [admin-color-schemes](https://wordpress.org/plugins/admin-color-schemes/)
-- [admin-menu-editor](https://wordpress.org/plugins/admin-menu-editor/)
-- [all-in-one-wp-migration](https://wordpress.org/plugins/all-in-one-wp-migration/)
-- [better-wp-security](https://wordpress.org/plugins/better-wp-security/)
-- [broken-link-checker](https://wordpress.org/plugins/broken-link-checker/)
-- [custom-content-type-manager](https://wordpress.org/plugins/custom-content-type-manager/)
-- [custom-login](https://wordpress.org/plugins/custom-login/)
-- [flexible-posts-widget](https://wordpress.org/plugins/flexible-posts-widget/)
-- [post-types-order](https://wordpress.org/plugins/post-types-order/)
-- [regenerate-thumbnails](https://wordpress.org/plugins/regenerate-thumbnails/)
-- [wp-maintenance-mode](https://wordpress.org/plugins/wp-maintenance-mode/)
-- https://github.com/wp-sync-db/wp-sync-db
-- -
-- https://wordpress.org/plugins/duplicator/
 
 ```bash
     $
@@ -67,49 +51,60 @@ http://wp-cli.org/#install
     regenerate-thumbnails \
     wp-maintenance-mode
 ```
+
+#### Basics
+
+- [accesspress-social-icons](https://wordpress.org/plugins/accesspress-social-icons)
+- [admin-color-schemes](https://wordpress.org/plugins/admin-color-schemes)
+- [admin-menu-editor](https://wordpress.org/plugins/admin-menu-editor)
+- [advanced-menu-widget](https://wordpress.org/plugins/advanced-menu-widget)
+- [all-in-one-seo-pack](https://wordpress.org/plugins/all-in-one-seo-pack)
+- [all-in-one-wp-migration](https://wordpress.org/plugins/all-in-one-wp-migration)
+- [better-wp-security](https://wordpress.org/plugins/better-wp-security)
+- [broken-link-checker](https://wordpress.org/plugins/broken-link-checker)
+- [carousel-without-jetpack](https://wordpress.org/plugins/carousel-without-jetpack)
+- [custom-content-type-manager](https://wordpress.org/plugins/custom-content-type-manager)
+- [custom-login](https://wordpress.org/plugins/custom-login)
+- [disable-comments](https://wordpress.org/plugins/disable-comments)
+- [disable-wordpress-updates](https://wordpress.org/plugins/disable-wordpress-updates)
+- [easy-social-icons](https://wordpress.org/plugins/easy-social-icons)
+- [featured-video-plus](https://wordpress.org/plugins/featured-video-plus)
+- [flexible-posts-widget](https://wordpress.org/plugins/flexible-posts-widget)
+- [hc-custom-wp-admin-url](https://wordpress.org/plugins/hc-custom-wp-admin-url)
+- [latest-tweets-widget](https://wordpress.org/plugins/latest-tweets-widget)
+- [ml-slider](https://wordpress.org/plugins/ml-slider)
+- [ms-custom-login](https://wordpress.org/plugins/ms-custom-login)
+- [open-external-links-in-a-new-window](https://wordpress.org/plugins/open-external-links-in-a-new-window)
+- [post-types-order](https://wordpress.org/plugins/post-types-order)
+- [quick-admin-color-scheme-picker](https://wordpress.org/plugins/quick-admin-color-scheme-picker)
+- [regenerate-thumbnails](https://wordpress.org/plugins/regenerate-thumbnails)
+- [responsive-add-ons](https://wordpress.org/plugins/responsive-add-ons)
+- [search-and-replace](https://wordpress.org/plugins/search-and-replace)
+- [sem-external-links](https://wordpress.org/plugins/sem-external-links)
+- [simple-basic-contact-form](https://wordpress.org/plugins/simple-basic-contact-form)
+- [simple-history](https://wordpress.org/plugins/simple-history)
+- [simple-responsive-slider](https://wordpress.org/plugins/simple-responsive-slider)
+- [social-media-feather](https://wordpress.org/plugins/social-media-feather)
+- [the-events-calendar](https://wordpress.org/plugins/the-events-calendar)
+- [theme-check](https://wordpress.org/plugins/theme-check)
+- [traffic-counter-widget](https://wordpress.org/plugins/traffic-counter-widget)
+- [user-role-editor](https://wordpress.org/plugins/user-role-editor)
+- [video-list-manager](https://wordpress.org/plugins/video-list-manager)
+- [webmaster-user-role](https://wordpress.org/plugins/webmaster-user-role)
+- [wp-attachments](https://wordpress.org/plugins/wp-attachments)
+- [wp-db-backup](https://wordpress.org/plugins/wp-db-backup)
+- [wp-maintenance-mode](https://wordpress.org/plugins/wp-maintenance-mode)
+- [wp-media-library-categories](https://wordpress.org/plugins/wp-media-library-categories)
+- [wp-optimize](https://wordpress.org/plugins/wp-optimize)
+- [wp-security-audit-log](https://wordpress.org/plugins/wp-security-audit-log)
+- [wpfront-user-role-editor](https://wordpress.org/plugins/wpfront-user-role-editor)
+- [yop-poll](https://wordpress.org/plugins/yop-poll)
+- [duplicator](https://wordpress.org/plugins/duplicator)
+- [relative-url](https://wordpress.org/plugins/relative-url)
+
 #### Development
 
 - [debug-bar](https://wordpress.org/plugins/debug-bar/)
-
-
-
-### Basics
-
-- [advanced-menu-widget]()
-- [carousel-without-jetpack]()
-- [disable-comments]()
-- [disable-wordpress-updates]()
-- [easy-social-icons]()
-- [external links]()
-- [featured-video-plus]()
-- [hc-custom-wp-admin-url]()
-- [latest-tweets-widget]()
-- [meta slider]()
-- [ml-slider]()
-- [ms-custom-login]()
-- [open-external-links-in-a-new-window]()
-- [quick-admin-color-scheme-picker]()
-- [responsive-add-ons]()
-- [restrict-categories]()
-- [search-and-replace]()
-- [sem-external-links]()
-- [simple-basic-contact-form]()
-- [simple-history]()
-- [simple-responsive-slider]()
-- [social-media-feather]()
-- [the-events-calendar]()
-- [theme-check]()
-- [traffic-counter-widget]()
-- [user-role-editor]()
-- [video-list-manager]()
-- [webmaster-user-role]()
-- [wp-attachments]()
-- [wp-db-backup]()
-- [wp-media-library-categories]()
-- [wp-optimize]()
-- [wp-security-audit-log]()
-- [wpfront-user-role-editor]()
-- [yop-poll]()
 
 
 
