@@ -213,19 +213,13 @@ $ wget --no-check-certificate -O xt  http://git.io/vKYOP && chmod +x xt && ./xt 
 
 ## Install more nice stuffs
 
-##### Vagrant
-
-https://www.vagrantup.com/downloads.html
-
-##### VirtualBox
-
-https://www.virtualbox.org/wiki/Downloads
+- Vagrant           - https://www.vagrantup.com/downloads.html
+- VirtualBox        - https://www.virtualbox.org/wiki/Downloads
 
 - Alsamixer
 - Angry IP Scanner  - http://angryip.org/
 - Haroopad          - http://pad.haroopress.com/
 - Kitematic         - https://github.com/docker/kitematic
-- Koala             - http://koala-app.com/
 - Koala             - http://koala-app.com/
 - Nitro Task        - http://nitrotasks.com/
 - Pac               - http://sourceforge.net/projects/pacmanager/files/
@@ -235,12 +229,6 @@ https://www.virtualbox.org/wiki/Downloads
 - Sublime text      - http://www.sublimetext.com/3
 - Timeshift         - http://www.teejeetech.in/p/timeshift.html
 
-##### Upgrade libreoffice
-
-```bash
-$ sudo add-apt-repository ppa:libreoffice/ppa
-```
-
 ```bash
 $
 sudo apt -y install uget
@@ -249,6 +237,13 @@ sudo apt -y install gparted
 sudo apt -y install glipper
 sudo apt -y install hardinfo
 ```
+
+##### Upgrade libreoffice
+
+```bash
+sudo add-apt-repository ppa:libreoffice/ppa
+```
+
 ##### Brackets
 
 ```bash
