@@ -450,7 +450,13 @@ sudo apt -y install xbmc
 $ sudo apt install -y \
                 php7.0 \
                 php7.0-fpm \
-                php7.0-mysql
+                php7.0-mysql \
+                php7.0-sqlite3 \
+                php7.0-mcrypt \
+                php7.0-mbstring \
+                php7.0-xml \
+                php7.0-curl \
+                mcrypt
 ```
 
 
