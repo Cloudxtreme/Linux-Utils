@@ -1,5 +1,13 @@
 # Netdata
 
+
+### Pre
+
+```
+$ yum install libuuid-devel
+$ yum install zlib-devel
+```
+
 ### Install
 
 ```bash
