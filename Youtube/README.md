@@ -1,44 +1,38 @@
+# youtube-dl
 
-/*
-|::  Aplicar
-|:: :::::::::::::::::::::::::::::::::::::::::::::: */
+https://github.com/rg3/youtube-dl
+http://rg3.github.io/youtube-dl/download.html
 
-netsh advfirewall firewall add rule name="YouTubePerformanceHack" dir=in action=block remoteip=173.194.55.0/24,206.111.0.0/16 enable=yes
+### Install
 
+```bash
+$ sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+$ sudo chmod a+rx /usr/local/bin/youtube-dl
+```
 
+### Descargar multiples videos
 
-/*
-|::  Remover
-|:: :::::::::::::::::::::::::::::::::::::::::::::: */
-
-netsh advfirewall firewall delete rule name="YouTubePerformanceHack"
-
-
-
-/*
-|::  Descargar multiples videos
-|::  https://github.com/rg3/youtube-dl
-|::  http://rg3.github.io/youtube-dl/download.html
-|:: :::::::::::::::::::::::::::::::::::::::::::::: */
-
+```bash
+youtube-dl --extract-audio --audio-format mp3  "{URL}"
 youtube-dl --title {URL}
 youtube-dl -o "%(title)s.%(ext)s"  {URL}
 youtube-dl --get-filename --date {DATE-Y-M-D} -o "%(title)s.%(ext)s" '{URL}'
 
+```
 
 
-/*
-|:: Lista de links
-|:: :::::::::::::::::::::::::::::::::::::::::::::: */
+
+## Lista de links
+
 
 youtube-dl -a youtube_links.txt {URL}
 
 
 
-/*
-|::  Opciones
-|:: :::::::::::::::::::::::::::::::::::::::::::::: */
 
+### Opciones
+
+```bash
 --playlist-start=N --playlist-end=N
 --simulate
 --get-filename
@@ -63,32 +57,25 @@ youtube-dl -a youtube_links.txt {URL}
     35 - H264 video in FLV container at 480p:
      5 - H263 video at 240p:
     17 - 3GP video:
+```
 
 
 
-/*
-|:: Examples
-|:: :::::::::::::::::::::::::::::::::::::::::::::: */
+### Examples
 
-/* ::::::: Start with Git */
+```bash
+ # Start with Git */
+youtube-dl -w --match-title ^Git -o "%(title)s.%(ext)s" 'http://www.youtube.com/user/acinteractivedesign/videos'
 
-    youtube-dl -w --match-title ^Git -o "%(title)s.%(ext)s" 'http://www.youtube.com/user/acinteractivedesign/videos'
+ # SIMULATE */
+youtube-dl -e --match-title ^Git 'http://www.youtube.com/user/acinteractivedesign/videos'
 
+ #  SIMULATE - Get title */
+youtube-dl --get-filename 'http://www.youtube.com/user/acinteractivedesign/videos'
 
-/* ::::::: SIMULATE */
+ # SIMULATE - Between Dates */
+youtube-dl -e --datebefore 20130905 --dateafter 20130108 'http://www.youtube.com/user/acinteractivedesign/videos'
 
-    youtube-dl -e --match-title ^Git 'http://www.youtube.com/user/acinteractivedesign/videos'
-
-/* :::::::  SIMULATE - Get title */
-
-    youtube-dl --get-filename 'http://www.youtube.com/user/acinteractivedesign/videos'
-
-/* ::::::: SIMULATE - Between Dates */
-
-    youtube-dl -e --datebefore 20130905 --dateafter 20130108 'http://www.youtube.com/user/acinteractivedesign/videos'
-
-/* ::::::: Between Dates */
-
-    youtube-dl -w -o "%(title)s.%(ext)s" --datebefore 20130905 --dateafter 20130108 'http://www.youtube.com/user/acinteractivedesign/videos'
-
-
+ # Between Dates */
+youtube-dl -w -o "%(title)s.%(ext)s" --datebefore 20130905 --dateafter 20130108 'http://www.youtube.com/user/acinteractivedesign/videos'
+```
