@@ -16,6 +16,19 @@ $ yum install zlib-devel
     $ ./netdata-installer.sh
 ```
 
+### View, Start, Stop
+
+- http://this.machine.ip:19999/
+
+```bash
+# To stop netdata, just kill it, with:
+
+$ killall netdata
+
+# To start it, just run it:
+
+$ /usr/sbin/netdata
+```
 
 ### Config
 
