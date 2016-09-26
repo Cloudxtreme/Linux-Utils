@@ -4,6 +4,8 @@
 - ENABLED - cPHulk Brute Force Protection
 - CHECK   - cPanel Security Advisor
 
+--------------------------------------------------------------------------------
+
 ## Install Letsencrypt
 
 https://github.com/Prajithp/letsencrypt-cpanel
@@ -13,3 +15,15 @@ https://github.com/Prajithp/letsencrypt-cpanel
 ```bash
 /scripts/install_lets_encrypt_autossl_provider
 ```
+
+--------------------------------------------------------------------------------
+
+## Change Index.html
+
+- in WHM go to:
+
+```bash
+Account Functions > Web Template Editor
+```
+
+--------------------------------------------------------------------------------
