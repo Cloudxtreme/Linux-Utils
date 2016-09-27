@@ -24,16 +24,31 @@
 
 - **Create bash script and execute**
 
+Ubuntu 16.04 
+
 ```bash
 #!/bin/bash
-echo "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.0 multiverse" > /etc/apt/sources.list.d/mongodb-org-3.0.list
-echo "deb http://repo.pritunl.com/stable/apt trusty main" > /etc/apt/sources.list.d/pritunl.list
-apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv 7F0CEB10
-apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv CF8E292A
+echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse" > /etc/apt/sources.list.d/mongodb-org-3.2.list
+echo "deb http://repo.pritunl.com/stable/apt xenial main" > /etc/apt/sources.list.d/pritunl.list
+tee -a /etc/yum.repos.d/mongodb-org-3.2.repo << EOF
+[Unit]
+Description=High-performance, schema-free document-oriented database
+After=network.target
+
+[Service]
+User=mongodb
+ExecStart=/usr/bin/mongod --config /etc/mongod.conf
+
+[Install]
+WantedBy=multi-user.target
+EOF
+apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv 42F3E95A2C4F08279C4960ADD68FA50FEA312927
+apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv 7568D9BB55FF9E5287D586017AE645C0CF8E292A
 apt-get --assume-yes update
 apt-get --assume-yes upgrade
 apt-get --assume-yes install pritunl mongodb-org
-service pritunl start
+systemctl start pritunl mongod
+systemctl enable pritunl mongod
 ```
 
 - **Go to Web GUI**
