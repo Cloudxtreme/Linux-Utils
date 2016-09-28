@@ -2,6 +2,38 @@
 
 http://www.gistboxapp.com/
 
+## Wordmove
+
+https://github.com/welaika/wordmove
+
+##### install
+
+```bash
+$ sudo gem install wordmove
+```
+
+##### Use
+
+- **Init**
+
+```bash
+$ wordmove init
+```
+
+- **Push all**
+
+```bash
+$ wordmove push --all
+```
+
+- **Push Theme**
+
+```bash
+$ wordmove push -t
+```
+
+--------------------------------------------------------------------------------
+
 ## Wp-Cli
 
 http://wp-cli.org/#install

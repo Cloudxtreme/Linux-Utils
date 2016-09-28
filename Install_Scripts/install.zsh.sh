@@ -122,25 +122,25 @@ else
 function_message_title_red 'Syntax highlighting plugin already install'
 fi
 
-# Install antigen
+# Install ZSH Git Prompt
 # ==============================================
-function_message_title 'Installing Antigen'
-if [[ ! -d ~/.antigen ]] ; then
-cd ~ && git clone https://github.com/zsh-users/antigen.git .antigen
+function_message_title 'Installing ZSH Git Prompt'
+if [[ ! -d ~/.zsh-git-prompt ]] ; then
+cd ~ && https://github.com/Mayccoll-Forks/zsh-git-prompt .zsh-git-prompt
 else
-function_message_title_red 'Antigen already install'
+function_message_title_red 'ZSH Git Prompt already install'
 fi
 
 
-# Insert antigen in zshrc
+# Insert ZSH Git Prompt in zshrc
 # ==============================================
 FILE_ZSH="${HOME}/.zshrc"
-XXXXXBEGIN='# |::::::::::::: antigen ::::::::::::::>>>' # |<=== Config This
-XXXXXXXEND='# |::::::::::::: antigen ::::::::::::::<<<' # |<=== Config This
+XXXXXBEGIN='# |::::::::::::: zsh git prompt ::::::::::::::>>>' # |<=== Config This
+XXXXXXXEND='# |::::::::::::: zsh git prompt ::::::::::::::<<<' # |<=== Config This
 function_delete_beetwen "\${XXXXXBEGIN}" "\${XXXXXXXEND}" "\${FILE_ZSH}"
 
 echo "${XXXXXBEGIN}" >> $FILE_ZSH
-wget -qO- https://raw.githubusercontent.com/Mayccoll/Linux-Utils/master/Install_Files/antigen.zshrc >> $FILE_ZSH
+wget -qO- https://raw.githubusercontent.com/Mayccoll/Linux-Utils/master/Install_Files/git-prompt >> $FILE_ZSH
 echo "${XXXXXXXEND}" >> $FILE_ZSH
 
 
