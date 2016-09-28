@@ -1,3 +1,4 @@
+source $HOME/.zsh-git-prompt/zshrc.sh
 if [[ $EUID -ne 0 ]]; then
 # no root
 PROMPT='
