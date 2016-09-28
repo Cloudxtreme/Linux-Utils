@@ -39,12 +39,12 @@ antigen-bundle zsh-users/zsh-history-substring-search
 # | Antigen Themes
 #
 
-antigen theme Mayccoll/oh-my-git-themes libra_dark
-# antigen theme Mayccoll/oh-my-git-themes libra
-# antigen theme Mayccoll/oh-my-git-themes libra_clean
-# antigen theme Mayccoll/oh-my-git-themes liino
-# antigen theme Mayccoll/oh-my-git-themes liino_red
-# antigen theme Mayccoll/oh-my-git-themes remol
+antigen theme Mayccoll/oh-my-zsh-m-themes libra_dark
+# antigen theme Mayccoll/oh-my-zsh-m-themes libra
+# antigen theme Mayccoll/oh-my-zsh-m-themes libra_clean
+# antigen theme Mayccoll/oh-my-zsh-m-themes liino
+# antigen theme Mayccoll/oh-my-zsh-m-themes liino_red
+# antigen theme Mayccoll/oh-my-zsh-m-themes remol
 
 
 antigen-apply
