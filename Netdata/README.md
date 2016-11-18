@@ -5,8 +5,8 @@
 
 ```
 Centos
-$ yum install libuuid-devel
-$ yum install zlib-devel
+$ yum install zlib-devel libuuid-devel libmnl-devel gcc make git autoconf autoconf-archive autogen automake pkgconfig curl
+
 
 Ubuntu
 $ sudo apt-get install zlib1g-dev uuid-dev libmnl-dev gcc make git autoconf autoconf-archive autogen automake pkg-config curl
