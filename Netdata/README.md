@@ -4,8 +4,12 @@
 ### Pre
 
 ```
+Centos
 $ yum install libuuid-devel
 $ yum install zlib-devel
+
+Ubuntu
+$ sudo apt-get install zlib1g-dev uuid-dev libmnl-dev gcc make git autoconf autoconf-archive autogen automake pkg-config curl
 ```
 
 ### Install
