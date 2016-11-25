@@ -6,7 +6,8 @@ alias l='ls -CF --color=auto'
 alias cc='clear'
 alias c='clear'
 alias ..='cd ..'
-alias oo-rsync='rsync -vharP '
+alias oo-rsync-local='rsync -vharP '
+alias oo-rsync-remote='rsync -vharPz '
 
 alias vims="sudo vim" # Run vim as super user
 alias ping='ping -c 5'      # Pings with 5 packets, not unlimited
