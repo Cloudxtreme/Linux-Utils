@@ -42,3 +42,15 @@
   php console.php files:scan <user_id> #For rescanning a users file
   php console.php files:scan --all #For rescanning the files of all users
 ```
+
+------
+
+# NextCloud
+
+### Scan and Add files
+
+```bash
+$ cd /var/www/nextcloud
+$ sudo su -s /bin/bash www-data
+$ ./occ files:scan USER
+```
