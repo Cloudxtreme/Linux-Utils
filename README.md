@@ -215,8 +215,6 @@ $ wget --no-check-certificate -O xt  http://git.io/vKYOP && chmod +x xt && ./xt 
 
 - Vagrant           - https://www.vagrantup.com/downloads.html
 - VirtualBox        - https://www.virtualbox.org/wiki/Downloads
-
-- Alsamixer
 - Angry IP Scanner  - http://angryip.org/
 - Haroopad          - http://pad.haroopress.com/
 - Kitematic         - https://github.com/docker/kitematic
@@ -229,14 +227,16 @@ $ wget --no-check-certificate -O xt  http://git.io/vKYOP && chmod +x xt && ./xt 
 - Sublime text      - http://www.sublimetext.com/3
 - Timeshift         - http://www.teejeetech.in/p/timeshift.html
 - Ocenaudio         - http://www.ocenaudio.com
+- VPN Client        - https://fruho.com
 
 ```bash
 $
-sudo apt -y install uget
-sudo apt -y install inkscape
-sudo apt -y install gparted
-sudo apt -y install glipper
-sudo apt -y install hardinfo
+sudo apt install -y alsamixergui
+sudo apt install -y glipper
+sudo apt install -y gparted
+sudo apt install -y hardinfo
+sudo apt install -y inkscape
+sudo apt install -y uget
 ```
 
 ##### Upgrade libreoffice
