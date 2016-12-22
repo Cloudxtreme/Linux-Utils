@@ -6,18 +6,15 @@ alias l='ls -CF --color=auto'
 alias cc='clear'
 alias c='clear'
 alias ..='cd ..'
-alias oo-rsync-local='rsync -vharP '
-alias oo-rsync-remote='rsync -vharPz '
 
-alias vims="sudo vim" # Run vim as super user
+alias svim="sudo vim"       # Run vim as super user
 alias ping='ping -c 5'      # Pings with 5 packets, not unlimited
-
 
 # curl for useragents
 alias iecurl="curl -H \"User-Agent: Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)\""
 alias ffcurl="curl -H \"User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.8) Gecko/2009032609 Firefox/3.0.0 (.NET CLR 3.5.30729)\""
 
-extract () {
+oo-extract () {
     if [ -f $1 ] ; then
         case $1 in
             *.tar.bz2)        tar xjf $1        ;;
@@ -37,18 +34,28 @@ extract () {
     fi
 }
 
-alias oo-ip='ip addr list | grep eth0$'
-
-alias oo-ram-free="echo ' echo 3 > /proc/sys/vm/drop_caches'"
-
 alias oo-untar_file="tar -xzvf $1"
-
-alias oo-users="cat /etc/passwd | grep /home | cut -d: -f1"
 
 # untar on the same folder
 oo-untar-here_file () {
     tar --strip-components=1 -zxvf "$1"
 }
+
+oo-ifconfig () {
+    ip addr | sed -r ':a;N;$!ba;s/\n\s/ /g' \
+        | sed -r -n -e 's/^([0-9]+):\s(\w+).*(link\/(\w+))\s[a-f0-9:.]{,17}\sbrd\s[a-f0-9:.]{,17}\s*(inet\s([0-9]{1,3}(\.[0-9]{1,3}){3})).*/- \2 \x1b[1;32m \6 \x1b[0m \4/p' -e 's/^([0-9]+):\s(\w+).*(link\/(\w+))\s[a-f0-9:.]{,17}\sbrd\s[a-f0-9:.]{,17}.*/- \2 \x1b[1m 0.0.0.0 \x1b[0m \4/p'
+}
+
+alias oo-rsync-local='rsync -vharP '
+alias oo-rsync-remote='rsync -vharPz '
+
+alias oo-ip='ip addr list | grep eth0$'
+
+alias oo-ram-free="echo ' echo 3 > /proc/sys/vm/drop_caches'"
+
+alias oo-users="cat /etc/passwd | grep /home | cut -d: -f1"
+
+alias oo-ssh="cat ~/.ssh/config"
 
 #wget limit
 oo-wget_limit_url () {
@@ -59,13 +66,15 @@ oo-mkdir_cd () {
     mkdir "$1" && cd "$1"
 }
 
-alias oo-ssh="cat ~/.ssh/config"
-
 oo-ssh-keygen_comm () {
-    ssh-keygen -t rsa -b 2048 -f ~/.ssh/"$1" -C "$1"
+    ssh-keygen -t rsa -b 4096 -f ~/.ssh/"$1" -C "$1"
 }
 
-
+oo-lamp-config-files () {
+    mysql --help | grep -A1 'Default options'
+    php -i | grep "Loaded Configuration File"
+    apache2ctl -V | grep SERVER_CONFIG_FILE
+}
 
 # |
 # | Alias Git
