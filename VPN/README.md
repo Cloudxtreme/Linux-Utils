@@ -75,6 +75,12 @@ systemctl enable pritunl mongod
 - **Download config file**
 - **Install Pritunl Client** [:arrow_right: :link:](#install-pritunl-client)
 
+- **Open Port**
+
+```bash
+$ ufw allow 19731
+```
+
 ------
 
 
