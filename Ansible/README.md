@@ -1,6 +1,15 @@
 Ansible
 =======
 
+## Install
+
+```bash
+sudo apt-add-repository -y ppa:ansible/ansible && \
+sudo apt-get update && \
+sudo apt-get install -y ansible
+```
+
+
 ## CI
 
 ```bash
@@ -9,6 +18,11 @@ Ansible
 ```
 
 ## Run local
+
+```bash
+touch bootstrap.yml && \
+vim bootstrap.yml
+```
 
 ```yml
 ---
