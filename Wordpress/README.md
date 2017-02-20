@@ -109,21 +109,31 @@ sudo find FOLDER/ -type f -exec chmod 644 {} \;
 #### Development
 
 - [debug-bar](https://wordpress.org/plugins/debug-bar/)
-- [theme-check](https://wordpress.org/plugins/theme-check)
+- [theme-check](https://wordpress.org/plugins/theme-check/)
 
 
 #### Esentials
 
-- [admin-color-schemes](https://wordpress.org/plugins/admin-color-schemes)
-- [admin-menu-editor](https://wordpress.org/plugins/admin-menu-editor)
-- [all-in-one-seo-pack](https://wordpress.org/plugins/all-in-one-seo-pack)
-- [all-in-one-wp-migration](https://wordpress.org/plugins/all-in-one-wp-migration)
-- [broken-link-checker](https://wordpress.org/plugins/broken-link-checker)
-- [custom-login-page-customizer](https://es.wordpress.org/plugins/login-customizer/)
-- [iThemes Security](https://es.wordpress.org/plugins/better-wp-security/)
-- [OSD Remove All WordPress Branding](https://wordpress.org/plugins/osd-remove-all-wp-creds/screenshots/)
-- [wp-security-audit-log](https://wordpress.org/plugins/wp-security-audit-log)
+- [admin-menu-editor](https://wordpress.org/plugins/admin-menu-editor/)
+- [all-in-one-wp-migration](https://wordpress.org/plugins/all-in-one-wp-migration/)
+- [broken-link-checker](https://wordpress.org/plugins/broken-link-checker/)
+- [client-documentation](https://wordpress.org/plugins/client-documentation/)
+- [disable-xml-rpc](https://wordpress.org/plugins/disable-xml-rpc/)
+- [duplicate-page](https://wordpress.org/plugins/duplicate-page/)
+- [duracelltomi-google-tag-manager](https://wordpress.org/plugins/duracelltomi-google-tag-manager/)
+- [flexible-posts-widget](https://wordpress.org/plugins/flexible-posts-widget/)
+- [hc-custom-wp-admin-url](https://wordpress.org/plugins/hc-custom-wp-admin-url/)
 - [media-library-assistant](https://wordpress.org/plugins/media-library-assistant/)
+- [ms-custom-login](https://wordpress.org/plugins/ms-custom-login/)
+- [osd-remove-all-wp-creds](https://wordpress.org/plugins/osd-remove-all-wp-creds/)
+- [post-state-tags](https://wordpress.org/plugins/post-state-tags/)
+- [quick-pagepost-redirect-plugin](https://wordpress.org/plugins/quick-pagepost-redirect-plugin/)
+- [simple-history](https://wordpress.org/plugins/simple-history/)
+- [siteorigin-panels](https://wordpress.org/plugins/siteorigin-panels/)
+- [wordfence](https://wordpress.org/plugins/wordfence/)
+- [wordpress-seo](https://wordpress.org/plugins/wordpress-seo/)
+- [wp-htaccess-control](https://wordpress.org/plugins/wp-htaccess-control/)
+- [wp-security-audit-log](https://wordpress.org/plugins/wp-security-audit-log/)
 
 
 #### Basics
