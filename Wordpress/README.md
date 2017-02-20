@@ -134,7 +134,6 @@ sudo find FOLDER/ -type f -exec chmod 644 {} \;
                 <li><a href="https://wordpress.org/plugins/post-state-tags/"> post-state-tags</a></li>
                 <li><a href="https://wordpress.org/plugins/quick-pagepost-redirect-plugin/">quick-pagepost-redirect-plugin</a> </li>
                 <li><a href="https://wordpress.org/plugins/simple-history/"> simple-history</a></li>
-                <li><a href="https://wordpress.org/plugins/siteorigin-panels/"> siteorigin-panels</a></li>
                 <li><a href="https://wordpress.org/plugins/wordfence/"> wordfence</a></li>
                 <li><a href="https://wordpress.org/plugins/wordpress-seo/"> wordpress-seo</a></li>
                 <li><a href="https://wordpress.org/plugins/wp-htaccess-control/"> wp-htaccess-control</a></li>
@@ -159,7 +158,6 @@ wp plugin install \
 	post-state-tags
 	quick-pagepost-redirect-plugin \
 	simple-history \
-	siteorigin-panels \
 	wordfence \
 	wordpress-seo \
 	wp-htaccess-control \
