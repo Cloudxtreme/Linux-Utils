@@ -155,7 +155,7 @@ wp plugin install \
 	media-library-assistant \
 	ms-custom-login \
 	osd-remove-all-wp-creds \
-	post-state-tags
+	post-state-tags \
 	quick-pagepost-redirect-plugin \
 	simple-history \
 	wordfence \
