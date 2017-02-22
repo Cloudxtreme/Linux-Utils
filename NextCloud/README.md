@@ -193,3 +193,21 @@ EXIT;
 - Database: ```nextcloud```
 - User: ```nextcloud```
 - Pass: ```spicaclearerie```
+
+
+### Enable Cache
+
+- **Install Cache**
+
+```bash
+$
+sudo apt-get install php-apcu-bc
+```
+
+config/config.php
+
++++
+
+```php
+'memcache.local' => '\OC\Memcache\APCu',
+```
