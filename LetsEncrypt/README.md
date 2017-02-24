@@ -1,5 +1,15 @@
 # Let's Encrypt
 
+## Install
+
+Ubuntu 14.04
+
+```
+wget https://dl.eff.org/certbot-auto
+chmod a+x certbot-auto
+sudo mv certbot-auto /usr/bin/certbot
+```
+
 https://letsencrypt.org/
 
 ### Generate
