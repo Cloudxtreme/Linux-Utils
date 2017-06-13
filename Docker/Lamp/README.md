@@ -1,6 +1,12 @@
 # Docker Lamp
 
+### Justo Run:
 
+```bash
+wget https://raw.githubusercontent.com/Mayccoll/Linux-Utils/master/Docker/Lamp/run.sh && \
+chmod +x run.sh && \
+./run.sh
+```
 
 
 ### Install PhpMyAdmin
