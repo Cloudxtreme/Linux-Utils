@@ -14,7 +14,7 @@ alias ping='ping -c 5'      # Pings with 5 packets, not unlimited
 alias iecurl="curl -H \"User-Agent: Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)\""
 alias ffcurl="curl -H \"User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.8) Gecko/2009032609 Firefox/3.0.0 (.NET CLR 3.5.30729)\""
 
-oo-extract () {
+o-extract () {
     if [ -f $1 ] ; then
         case $1 in
             *.tar.bz2)        tar xjf $1        ;;
@@ -34,43 +34,43 @@ oo-extract () {
     fi
 }
 
-alias oo-untar_file="tar -xzvf $1"
+alias o-untar_file="tar -xzvf $1"
 
 # untar on the same folder
-oo-untar-here_file () {
+o-untar-here_file () {
     tar --strip-components=1 -zxvf "$1"
 }
 
-oo-ifconfig () {
+o-ifconfig () {
     ip addr | sed -r ':a;N;$!ba;s/\n\s/ /g' \
         | sed -r -n -e 's/^([0-9]+):\s(\w+).*(link\/(\w+))\s[a-f0-9:.]{,17}\sbrd\s[a-f0-9:.]{,17}\s*(inet\s([0-9]{1,3}(\.[0-9]{1,3}){3})).*/- \2 \x1b[1;32m \6 \x1b[0m \4/p' -e 's/^([0-9]+):\s(\w+).*(link\/(\w+))\s[a-f0-9:.]{,17}\sbrd\s[a-f0-9:.]{,17}.*/- \2 \x1b[1m 0.0.0.0 \x1b[0m \4/p'
 }
 
-alias oo-rsync-local='rsync -vharP '
-alias oo-rsync-remote='rsync -vharPz '
+alias o-rsync-local='rsync -vharP '
+alias o-rsync-remote='rsync -vharPz '
 
-alias oo-ip='ip addr list | grep eth0$'
+alias o-ip='ip addr list | grep eth0$'
 
-alias oo-ram-free="echo ' echo 3 > /proc/sys/vm/drop_caches'"
+alias o-ram-free="echo ' echo 3 > /proc/sys/vm/drop_caches'"
 
-alias oo-users="cat /etc/passwd | grep /home | cut -d: -f1"
+alias o-users="cat /etc/passwd | grep /home | cut -d: -f1"
 
-alias oo-ssh="cat ~/.ssh/config"
+alias o-ssh="cat ~/.ssh/config"
 
 #wget limit
-oo-wget_limit_url () {
+o-wget_limit_url () {
     wget --limit-rate="$1"k "$2"
 }
 
-oo-mkdir_cd () {
+o-mkdir_cd () {
     mkdir "$1" && cd "$1"
 }
 
-oo-ssh-keygen_comm () {
+o-ssh-keygen_comm () {
     ssh-keygen -t rsa -b 4096 -f ~/.ssh/"$1" -C "$1"
 }
 
-oo-lamp-config-files () {
+o-lamp-config-files () {
     mysql --help | grep -A1 'Default options'
     php -i | grep "Loaded Configuration File"
     apache2ctl -V | grep SERVER_CONFIG_FILE
@@ -87,7 +87,7 @@ clone () {
     cd $reponame;
 }
 
-oo-echo () {
+o-echo () {
     echo ""
     echo "git--l = git log --graph --pretty=oneline --abbrev-commit"
     echo "git--ll = git log --pretty=oneline --abbrev=9 -5"
@@ -111,7 +111,7 @@ alias git--unpull="git log HEAD..origin/master --oneline"
 alias git--unpull-upstream="git log HEAD..upstream/master --oneline"
 alias git--lme="git log --merges --oneline -20"
 alias git--lstat="git log --pretty=format:'%Cred%h%Creset - %Cgreen%ar %Creset- %an, : %s %C(yellow)%d' -30"
-alias oo-count-b-ups="echo -e ' Behine upstream \e[0;31m' && git log HEAD..upstream/master --oneline | wc -l && echo -e '\e[0m Commits'"
+alias o-count-b-ups="echo -e ' Behine upstream \e[0;31m' && git log HEAD..upstream/master --oneline | wc -l && echo -e '\e[0m Commits'"
 
 
 
@@ -120,7 +120,7 @@ alias oo-count-b-ups="echo -e ' Behine upstream \e[0;31m' && git log HEAD..upstr
 # | Print all colors in console
 # |:::::::::::::::::::::::::::::::::::::::::::::::::|
 
-oo-colors () {
+o-colors () {
 
     echo "# Reset color"
     echo -e "\e[0m ***** AaBbCs *** \[\\\e[0m\] *** \\\e[0m \\e[0m ---> rs"

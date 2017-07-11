@@ -55,15 +55,13 @@ zsh --version 2>&1 >/dev/null
 CHECK=$?
 if [ $CHECK -ne 0 ]; then
     sudo apt-get install -y zsh
+    # Setting ZSH as the default shell (instead of bash)
+    # ==============================================
+    w=`which zsh` && h=`whoami` && sudo chsh -s $w $h
 else
     function_message_title_red 'zsh already install'
     zsh --version
 fi
-
-
-# Setting ZSH as the default shell (instead of bash)
-# ==============================================
-w=`which zsh` && h=`whoami` && sudo chsh -s $w $h
 
 
 # - Install git if not present
