@@ -32,3 +32,12 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 export ANDROID_EMULATOR_USE_SYSTEM_LIBS=1
 # |::::::::::::: Android ::::::::::::::<<<
 ```
+
+
+# ## Error  Register App
+
+- Delete Emulator and run:
+
+```bash
+adb kill-server && adb start-server
+```

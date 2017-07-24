@@ -14,7 +14,7 @@ alias ping='ping -c 5'      # Pings with 5 packets, not unlimited
 alias iecurl="curl -H \"User-Agent: Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)\""
 alias ffcurl="curl -H \"User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.8) Gecko/2009032609 Firefox/3.0.0 (.NET CLR 3.5.30729)\""
 
-o-extract () {
+oo-extract () {
     if [ -f $1 ] ; then
         case $1 in
             *.tar.bz2)        tar xjf $1        ;;
@@ -34,43 +34,45 @@ o-extract () {
     fi
 }
 
-alias o-untar_file="tar -xzvf $1"
+alias oo-untar_file="tar -xzvf $1"
 
 # untar on the same folder
-o-untar-here_file () {
+oo-untar-here_file () {
     tar --strip-components=1 -zxvf "$1"
 }
 
-o-ifconfig () {
+oo-ifconfig () {
     ip addr | sed -r ':a;N;$!ba;s/\n\s/ /g' \
         | sed -r -n -e 's/^([0-9]+):\s(\w+).*(link\/(\w+))\s[a-f0-9:.]{,17}\sbrd\s[a-f0-9:.]{,17}\s*(inet\s([0-9]{1,3}(\.[0-9]{1,3}){3})).*/- \2 \x1b[1;32m \6 \x1b[0m \4/p' -e 's/^([0-9]+):\s(\w+).*(link\/(\w+))\s[a-f0-9:.]{,17}\sbrd\s[a-f0-9:.]{,17}.*/- \2 \x1b[1m 0.0.0.0 \x1b[0m \4/p'
 }
 
-alias o-rsync-local='rsync -vharP '
-alias o-rsync-remote='rsync -vharPz '
+alias oo-rsync-local='rsync -vharP '
+alias oo-rsync-remote='rsync -vharPz '
 
-alias o-ip='ip addr list | grep eth0$'
+alias oo-rsync-help='echo "\e[0;33mRemote:\e[0m rsync -vharPz SOURCE DESTINATION \n\e[0;33mLocal:\e[0m  rsync -vharP SOURCE DESTINATION"'
 
-alias o-ram-free="echo ' echo 3 > /proc/sys/vm/drop_caches'"
+alias oo-ip='ip addr list | grep eth0$'
 
-alias o-users="cat /etc/passwd | grep /home | cut -d: -f1"
+alias oo-ram-free="echo ' echo 3 > /proc/sys/vm/drop_caches'"
 
-alias o-ssh="cat ~/.ssh/config"
+alias oo-users="cat /etc/passwd | grep /home | cut -d: -f1"
+
+alias oo-ssh="cat ~/.ssh/config"
 
 #wget limit
-o-wget_limit_url () {
+oo-wget_limit_url () {
     wget --limit-rate="$1"k "$2"
 }
 
-o-mkdir_cd () {
+oo-mkdir_cd () {
     mkdir "$1" && cd "$1"
 }
 
-o-ssh-keygen_comm () {
+oo-ssh-keygen_comm () {
     ssh-keygen -t rsa -b 4096 -f ~/.ssh/"$1" -C "$1"
 }
 
-o-lamp-config-files () {
+oo-lamp-config-files () {
     mysql --help | grep -A1 'Default options'
     php -i | grep "Loaded Configuration File"
     apache2ctl -V | grep SERVER_CONFIG_FILE
@@ -87,10 +89,10 @@ clone () {
     cd $reponame;
 }
 
-o-echo () {
+oo-echo () {
     echo ""
     echo "git--l = git log --graph --pretty=oneline --abbrev-commit"
-    echo "git--ll = git log --pretty=oneline --abbrev=9 -5"
+    echo "git--ll = git log --pretty=oneline --abbrev=9 -15"
     echo "git--log = git log --pretty=oneline --abbrev-commit"
     echo "git--log-cant-user = git shortlog -s -n"
     echo "git--unpush = git log origin/master..HEAD --oneline"
@@ -103,7 +105,7 @@ o-echo () {
 
 
 alias git--l="git log --graph --pretty=oneline --abbrev-commit --abbrev=9"
-alias git--ll="git log --pretty=oneline --abbrev=9 -5"
+alias git--ll="git log --pretty=oneline --abbrev=9 -15"
 alias git--log="git log --pretty=oneline --abbrev-commit --abbrev=9 $1"
 alias git--log-cant-user="git shortlog -s -n"
 alias git--unpush="git log origin/master..HEAD --oneline"
@@ -111,7 +113,7 @@ alias git--unpull="git log HEAD..origin/master --oneline"
 alias git--unpull-upstream="git log HEAD..upstream/master --oneline"
 alias git--lme="git log --merges --oneline -20"
 alias git--lstat="git log --pretty=format:'%Cred%h%Creset - %Cgreen%ar %Creset- %an, : %s %C(yellow)%d' -30"
-alias o-count-b-ups="echo -e ' Behine upstream \e[0;31m' && git log HEAD..upstream/master --oneline | wc -l && echo -e '\e[0m Commits'"
+alias oo-count-b-ups="echo -e ' Behine upstream \e[0;31m' && git log HEAD..upstream/master --oneline | wc -l && echo -e '\e[0m Commits'"
 
 
 
@@ -120,7 +122,7 @@ alias o-count-b-ups="echo -e ' Behine upstream \e[0;31m' && git log HEAD..upstre
 # | Print all colors in console
 # |:::::::::::::::::::::::::::::::::::::::::::::::::|
 
-o-colors () {
+oo-colors () {
 
     echo "# Reset color"
     echo -e "\e[0m ***** AaBbCs *** \[\\\e[0m\] *** \\\e[0m \\e[0m ---> rs"
@@ -306,3 +308,9 @@ color () {
     echo -e "\e[0;30m█████\\e[0m\e[0;31m█████\\e[0m\e[0;32m█████\\e[0m\e[0;33m█████\\e[0m\e[0;34m█████\\e[0m\e[0;35m█████\\e[0m\e[0;36m█████\\e[0m\e[0;37m█████\\e[0m"
     echo -e "\e[0m\e[1;30m█████\\e[0m\e[1;31m█████\\e[0m\e[1;32m█████\\e[0m\e[1;33m█████\\e[0m\e[1;34m█████\\e[0m\e[1;35m█████\\e[0m\e[1;36m█████\\e[0m\e[1;37m█████\\e[0m"
 }
+
+# |::::::::::::: alias ::::::::::::::<<<
+PATH="$HOME/.local/bin:$PATH"
+
+# |::::::::::::: Disable Ansible Cow ::::::::::::::<<<
+export ANSIBLE_NOCOWS=1
