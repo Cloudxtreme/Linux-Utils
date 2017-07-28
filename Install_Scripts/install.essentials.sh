@@ -32,7 +32,41 @@ wait
 sudo ln -sf /lib/x86_64-linux-gnu/libudev.so.1 /lib/x86_64-linux-gnu/libudev.so.0
 wait
 
-sudo apt-get install -y autoconf automake  build-essential libxslt1-dev re2c libxml2 libxml2-dev bison libbz2-dev libreadline-dev libfreetype6 libfreetype6-dev libpng12-0 libpng12-dev libjpeg-dev libjpeg8-dev libjpeg8  libgd-dev libgd3 libxpm4 libssl-dev openssl gettext libgettextpo-dev libgettextpo0 libicu-dev libmhash-dev libmhash2 libmcrypt-dev libmcrypt4 python-software-properties software-properties-common g++ libssl-dev pkg-config
+sudo apt-get install -y autoconf \
+                        automake \
+                        bison \
+                        build-essential \
+                        g++ \
+                        gettext \
+                        libbz2-dev \
+                        libfreetype6 \
+                        libfreetype6-dev \
+                        libgd-dev \
+                        libgd3 \
+                        libgettextpo-dev \
+                        libgettextpo0 \
+                        libicu-dev \
+                        libjpeg-dev \
+                        libjpeg8 \
+                        libjpeg8-dev \
+                        libmcrypt-dev \
+                        libmcrypt4 \
+                        libmhash-dev \
+                        libmhash2 \
+                        libpng12-0 \
+                        libpng12-dev \
+                        libreadline-dev \
+                        libssl-dev \
+                        libssl-dev \
+                        libxml2 \
+                        libxml2-dev \
+                        libxpm4 \
+                        libxslt1-dev \
+                        openssl \
+                        pkg-config
+                        python-software-properties \
+                        re2c \
+                        software-properties-common \
 wait
 
 sudo apt-get install -y linux-headers-generic dkms
@@ -41,7 +75,13 @@ wait
 
 # - **Essential tools for compiling from sources**
 function_message_title '- **Essential tools for compiling from sources**'
-sudo apt-get install -y checkinstall cdbs devscripts dh-make fakeroot libxml-parser-perl check
+sudo apt-get install -y checkinstall \
+                        cdbs \
+                        devscripts \
+                        dh-make \
+                        fakeroot \
+                        libxml-parser-perl \
+                        check
 wait
 
 

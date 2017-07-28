@@ -23,15 +23,15 @@ Collection of scripts to install some essential programs.
 $ wget -O xw  https://git.io/vKYOP && chmod +x xw && ./xw && rm xw
 ```
 
-- software-properties-common
-- python-software-properties
+- Software-properties-common
+- Python-software-properties
 - Progress bar
 - Git
 - Curl
 - Vim
 - Htop
 - Tree
-- ack
+- Ack
 
 ##### Install Eessentials
 
@@ -41,10 +41,10 @@ $ wget -O xw  https://git.io/vKY3A && chmod +x xw && ./xw && rm xw
 
 - Essential tools for compiling from sources
 - Packing software
-- zssh
-- Cloc
+- Zssh (zssh is a program for transferring files to a remote machine )
+- Cloc (Count Lines of Code)
 - Git Cloc
-- Git Exwras
+- Git Extras
 
 ##### Install ZSH
 
@@ -52,9 +52,12 @@ $ wget -O xw  https://git.io/vKY3A && chmod +x xw && ./xw && rm xw
 $ wget -O xw  https://git.io/vKYsm && chmod +x xw && ./xw && rm xw
 ```
 
-- zsh
+- Zsh
 - Oh-My-ZSH
-- antigen
+- Insert .zshrc
+- Zsh Syntax highlighting
+- ZSH Git Prompt
+- Awesome Tterminal Fonts
 
 ##### Install Alias
 
@@ -85,7 +88,7 @@ $ wget -O xw  https://git.io/vKYsP && chmod +x xw && ./xw && rm xw
 
 - Samba
 - Filezilla
-- mysql-workbench
+- Mysql Workbench
 - Remmina
 - Cryptkeeper
 - Meld
@@ -96,9 +99,7 @@ $ wget -O xw  https://git.io/vKYsP && chmod +x xw && ./xw && rm xw
 $ wget -O xw  https://git.io/vKYsS && chmod +x xw && ./xw && rm xw
 ```
 
-- Themes Libra Flattastic
 - Grub Customizer
-- Cairo-Dock
 
 ##### Install Extras
 
@@ -107,7 +108,7 @@ $ wget -O xw  https://git.io/vKYsd && chmod +x xw && ./xw && rm xw
 ```
 
 - Pyrenamer
-- DaemonFSk
+- DaemonFSk (Real time file watcher)
 - Gufw
 - Viewnior
 - Nemo Rabbitvcs
@@ -629,6 +630,14 @@ sudo apt install -y nasc
 ## Themes and Icons
 
 
+##### Cairo-Dock
+
+```bash
+$
+sudo add-apt-repository -y ppa:cairo-dock-team/ppa && \
+sudo apt update && \
+sudo apt-get install -y cairo-dock cairo-dock-plug-ins
+```
 
 ##### Libra
 
