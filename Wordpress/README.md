@@ -1,7 +1,56 @@
 # Wordpress
 
+## Download
 
-## :turtle: Wordmove
+http://wordpress.org/latest.tar.gz
+
+
+--------------------------------------------------------------------------------
+
+### Security
+
+- **Kill PHP execution.**
+
+wp-content/uploads/.htaccess_
+
+```bash
+<Files *.php>
+    Deny from All
+</Files>
+```
+
+--------------------------------------------------------------------------------
+
+## Performance
+
+- ```.htaccess```
+
+```bash
+### BEGIN php tweaks ###
+php_value memory_limit 512M
+php_value upload_max_filesize 512M
+php_value post_max_size 256M
+php_value max_execution_time 300
+php_value max_input_time 300
+### END php tweaks ###
+```
+
+```bash
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+# END WordPress
+```
+
+--------------------------------------------------------------------------------
+
+## Wordmove :turtle:
 
 https://github.com/welaika/wordmove
 
@@ -220,9 +269,11 @@ wp plugin install \
 
 @import url("../css/mystyle.css");
 
-/*
- - =Theme customization starts here=
------------------------------------------------------------------------------ */
+/**
+ * ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ * ·······  Theme customization starts here
+ * ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ */
 ```
 
 
