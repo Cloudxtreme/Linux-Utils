@@ -240,6 +240,19 @@ sudo apt install -y inkscape
 sudo apt install -y uget
 ```
 
+##### Exa - https://github.com/ogham/exa
+
+Replacement for 'ls'
+
+```bash
+$ sudo apt-get install libhttp-parser2.1
+$ curl https://sh.rustup.rs -sSf | sh
+$ wget -c https://the.exa.website/releases/exa-linux-x86_64-0.7.0.zip
+$ unzip exa-linux-x86_64-0.7.0.zip
+$ sudo
+$ sudo mv exa-linux-x86_64 /usr/local/bin/exa
+```
+
 ##### Upgrade libreoffice
 
 ```bash
