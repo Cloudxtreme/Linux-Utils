@@ -88,22 +88,27 @@ clone () {
     git clone $url $reponame;
     cd $reponame;
 }
-
-oo-echo () {
+oo-git () {
     echo ""
-    echo "git--l = git log --graph --pretty=oneline --abbrev-commit"
-    echo "git--ll = git log --pretty=oneline --abbrev=9 -15"
-    echo "git--log = git log --pretty=oneline --abbrev-commit"
+    echo "git--i             = git status &&  echo '\\\n' && git ls-files -v | grep '^[[:lower:]]'"
+    echo "git--l             = git log --graph --pretty=oneline --abbrev-commit"
+    echo "git--ll            = git log --pretty=oneline --abbrev=9 -15"
+    echo "git--log           = git log --pretty=oneline --abbrev-commit"
     echo "git--log-cant-user = git shortlog -s -n"
-    echo "git--unpush = git log origin/master..HEAD --oneline"
-    echo "git--unpull = git log HEAD..origin/master --oneline"
-    echo "git--lme = git log --merges --oneline -20"
-    echo "git--lstat = git log --pretty=format:'%h - %ar - %an, : %s' -30"
-    echo "git--count-b-ups = git log HEAD..upstream/master --oneline | wc -l "
+    echo "git--unpush        = git log origin/master..HEAD --oneline"
+    echo "git--unpull        = git log HEAD..origin/master --oneline"
+    echo "git--lme           = git log --merges --oneline -20"
+    echo "git--lstat         = git log --pretty=format:'%h - %ar - %an, : %s' -30"
+    echo "git--count-b-ups   = git log HEAD..upstream/master --oneline | wc -l "
 }
 
+oo-git-i-help () {
+    echo "git update-index --assume-unchanged <filename>"
+    echo ""
+    echo "git update-index --no-assume-unchanged <filename>"
+}
 
-
+alias git--i="git status &&  echo '\n' && git ls-files -v | grep '^[[:lower:]]'"
 alias git--l="git log --graph --pretty=oneline --abbrev-commit --abbrev=9"
 alias git--ll="git log --pretty=oneline --abbrev=9 -15"
 alias git--log="git log --pretty=oneline --abbrev-commit --abbrev=9 $1"
