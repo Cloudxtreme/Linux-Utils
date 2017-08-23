@@ -47,6 +47,7 @@ oo-ifconfig () {
 }
 
 alias oo-rsync-local='rsync -vharP '
+alias oo-rsync-local-rm-source='rsync -vharP --remove-source-files '
 alias oo-rsync-remote='rsync -vharPz '
 
 alias oo-rsync-help='echo "\e[0;33mRemote:\e[0m rsync -vharPz SOURCE DESTINATION \n\e[0;33mLocal:\e[0m  rsync -vharP SOURCE DESTINATION"'
