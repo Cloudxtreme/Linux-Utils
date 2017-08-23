@@ -16,6 +16,21 @@ $
 echo "" | sudo tee /var/log/nextcloud.log
 ```
 
+### Remove all deleted files
+
+```bash
+cd /var/www/nextcloud
+sudo -u www-data php occ trashbin:cleanup
+```
+
+### Remove all deleted files for User
+
+```bash
+cd /var/www/nextcloud
+sudo -u www-data php occ trashbin:cleanup user2 user4
+```
+
+
 --------------------------------------------------------------------------------
 
 # Install
