@@ -1,11 +1,10 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
-
 # Auto Update Enable
 DISABLE_AUTO_UPDATE="true"
-
+# Default Theme
 ZSH_THEME="robbyrussell"
-
+# Active plugins
 plugins=(git themes pip node npm history-substring-search zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh

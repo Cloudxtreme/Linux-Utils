@@ -1,6 +1,39 @@
 # NextCloud
 
-## Install
+## Scan Files
+
+```bash
+$
+cd /var/www/nextcloud
+sudo -u www-data php occ files:scan USER
+```
+
+
+### Delete Log Files
+
+```bash
+$
+echo "" | sudo tee /var/log/nextcloud.log
+```
+
+### Remove all deleted files
+
+```bash
+cd /var/www/nextcloud
+sudo -u www-data php occ trashbin:cleanup
+```
+
+### Remove all deleted files for User
+
+```bash
+cd /var/www/nextcloud
+sudo -u www-data php occ trashbin:cleanup user2 user4
+```
+
+
+--------------------------------------------------------------------------------
+
+# Install
 
 #### Create script to install LAMP
 

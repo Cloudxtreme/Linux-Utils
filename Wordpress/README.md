@@ -1,10 +1,56 @@
 # Wordpress
 
-## Functions Gitbox
+## Download
 
-http://www.gistboxapp.com/
+http://wordpress.org/latest.tar.gz
 
-## Wordmove
+
+--------------------------------------------------------------------------------
+
+### Security
+
+- **Kill PHP execution.**
+
+wp-content/uploads/.htaccess_
+
+```bash
+<Files *.php>
+    Deny from All
+</Files>
+```
+
+--------------------------------------------------------------------------------
+
+## Performance
+
+- ```.htaccess```
+
+```bash
+### BEGIN php tweaks ###
+php_value memory_limit 512M
+php_value upload_max_filesize 512M
+php_value post_max_size 256M
+php_value max_execution_time 300
+php_value max_input_time 300
+### END php tweaks ###
+```
+
+```bash
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+# END WordPress
+```
+
+--------------------------------------------------------------------------------
+
+## Wordmove :turtle:
 
 https://github.com/welaika/wordmove
 
@@ -62,7 +108,7 @@ $ wordmove pull -t
 
 --------------------------------------------------------------------------------
 
-## Wp-Cli
+## :cat: Wp-Cli
 
 http://wp-cli.org/#install
 
@@ -92,7 +138,7 @@ wp plugin install --activate all-in-one-wp-migration  admin-color-schemes
 
 --------------------------------------------------------------------------------
 
-## Permissions
+## :pig: Permissions
 
 ```bash
 $
@@ -103,45 +149,40 @@ sudo find FOLDER/ -type f -exec chmod 644 {} \;
 
 --------------------------------------------------------------------------------
 
-## Plugins
+## :monkey: Plugins
 
 
 #### Development
 
-- [debug-bar](https://wordpress.org/plugins/debug-bar/)
-- [theme-check](https://wordpress.org/plugins/theme-check/)
+-   [debug-bar](https://wordpress.org/plugins/debug-bar/)
+-   [theme-check](https://wordpress.org/plugins/theme-check/)
 
 
 #### Esentials
 
+-   [admin-menu-editor](https://wordpress.org/plugins/admin-menu-editor/)
+-   [all-in-one-wp-migration](https://wordpress.org/plugins/all-in-one-wp-migration/)
+-   [broken-link-checker](https://wordpress.org/plugins/broken-link-checker/)
+-   [client-documentation](https://wordpress.org/plugins/client-documentation/)
+-   [disable-xml-rpc](https://wordpress.org/plugins/disable-xml-rpc/)
+-   [duplicate-page](https://wordpress.org/plugins/duplicate-page/)
+-   [metronet-tag-manager](https://wordpress.org/plugins/metronet-tag-manager/)
+-   [flexible-posts-widget](https://wordpress.org/plugins/flexible-posts-widget/)
+-   [hc-custom-wp-admin-url](https://wordpress.org/plugins/hc-custom-wp-admin-url/)
+-   [media-library-assistant](https://wordpress.org/plugins/media-library-assistant/)
+-   [ms-custom-login](https://wordpress.org/plugins/ms-custom-login/)
+-   [osd-remove-all-wp-creds](https://wordpress.org/plugins/osd-remove-all-wp-creds/)
+-   [post-state-tags](https://wordpress.org/plugins/post-state-tags/)
+-   [quick-pagepost-redirect-plugin](https://wordpress.org/plugins/quick-pagepost-redirect-plugin/)
+-   [simple-history](https://wordpress.org/plugins/simple-history/)
+-   [siteorigin-panels](https://wordpress.org/plugins/siteorigin-panels/)
+-   [wordfence](https://wordpress.org/plugins/wordfence/)
+-   [wordpress-seo](https://wordpress.org/plugins/wordpress-seo/)
+-   [wp-htaccess-control](https://wordpress.org/plugins/wp-htaccess-control/)
+-   [wp-security-audit-log](https://wordpress.org/plugins/wp-security-audit-log/)
 
-<table>
-    <tr>
-        <td>
-            <ul>
-                <li><a href="https://wordpress.org/plugins/admin-menu-editor/"> admin-menu-editor</a></li>
-                <li><a href="https://wordpress.org/plugins/all-in-one-wp-migration/"> all-in-one-wp-migration</a></li>
-                <li><a href="https://wordpress.org/plugins/broken-link-checker/"> broken-link-checker</a></li>
-                <li><a href="https://wordpress.org/plugins/client-documentation/"> client-documentation</a></li>
-                <li><a href="https://wordpress.org/plugins/disable-xml-rpc/"> disable-xml-rpc</a></li>
-                <li><a href="https://wordpress.org/plugins/duplicate-page/"> duplicate-page</a></li>
-                <li><a href="https://wordpress.org/plugins/duracelltomi-google-tag-manager/">duracelltomi-google-tag-manager</a> </li>
-                <li><a href="https://wordpress.org/plugins/flexible-posts-widget/"> flexible-posts-widget</a></li>
-                <li><a href="https://wordpress.org/plugins/hc-custom-wp-admin-url/"> hc-custom-wp-admin-url</a></li>
-                <li><a href="https://wordpress.org/plugins/media-library-assistant/"> media-library-assistant</a></li>
-                <li><a href="https://wordpress.org/plugins/ms-custom-login/"> ms-custom-login</a></li>
-                <li><a href="https://wordpress.org/plugins/osd-remove-all-wp-creds/"> osd-remove-all-wp-creds</a></li>
-                <li><a href="https://wordpress.org/plugins/post-state-tags/"> post-state-tags</a></li>
-                <li><a href="https://wordpress.org/plugins/quick-pagepost-redirect-plugin/">quick-pagepost-redirect-plugin</a> </li>
-                <li><a href="https://wordpress.org/plugins/simple-history/"> simple-history</a></li>
-                <li><a href="https://wordpress.org/plugins/wordfence/"> wordfence</a></li>
-                <li><a href="https://wordpress.org/plugins/wordpress-seo/"> wordpress-seo</a></li>
-                <li><a href="https://wordpress.org/plugins/wp-htaccess-control/"> wp-htaccess-control</a></li>
-                <li><a href="https://wordpress.org/plugins/wp-security-audit-log/"> wp-security-audit-log</a></li>
-            </ul>
-        </td>
-        <td>
-            <pre><code>
+
+```bash
 wp plugin install \
 	admin-menu-editor \
 	all-in-one-wp-migration \
@@ -149,7 +190,7 @@ wp plugin install \
 	client-documentation \
 	disable-xml-rpc \
 	duplicate-page \
-	duracelltomi-google-tag-manager \
+	metronet-tag-manager \
 	flexible-posts-widget \
 	hc-custom-wp-admin-url \
 	media-library-assistant \
@@ -162,10 +203,7 @@ wp plugin install \
 	wordpress-seo \
 	wp-htaccess-control \
 	wp-security-audit-log    
-            </code></pre>
-        </td>
-    </tr>
-</table>
+```
 
 
 
@@ -214,16 +252,9 @@ wp plugin install \
 
 
 
+--------------------------------------------------------------------------------
 
-
-
-
-
-
-
-
-
-### Child Theme
+## :bear: Child Theme
 
 ```css
 /*
@@ -236,10 +267,13 @@ wp plugin install \
  Version:        1.0.0
 */
 
-@import url("../Foxy/style.css");
+@import url("../css/mystyle.css");
 
-/* =Theme customization starts here
-------------------------------------------------------- */
+/**
+ * ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ * ·······  Theme customization starts here
+ * ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ */
 ```
 
 
@@ -249,15 +283,15 @@ wp plugin install \
 <?php
 global $post;
 $args = array(
-  'posts_per_page'    => 5,
-  'category'=> 59
+    'posts_per_page'    => 5,
+    'category'=> 59
 );
 $myposts = get_posts( $args );
 foreach( $myposts as $post ) : setup_postdata($post);
-  the_permalink();
-  the_title();
-  the_post_thumbnail('full');
-  the_title();
+    the_permalink();
+    the_title();
+    the_post_thumbnail('full');
+    the_title();
 endforeach;
 
 ```

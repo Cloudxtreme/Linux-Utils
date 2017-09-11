@@ -77,7 +77,7 @@ wait
 
 
 # - **ack**
-function_message_title '- **ack**'
+function_message_title '- **Ack**'
 sudo apt-get install -y ack-grep
 sudo ln -s /usr/bin/ack-grep /usr/bin/ack
 wait

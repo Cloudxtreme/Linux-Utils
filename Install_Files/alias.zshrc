@@ -47,7 +47,10 @@ oo-ifconfig () {
 }
 
 alias oo-rsync-local='rsync -vharP '
+alias oo-rsync-local-rm-source='rsync -vharP --remove-source-files '
 alias oo-rsync-remote='rsync -vharPz '
+
+alias oo-rsync-help='echo "\e[0;33mRemote:\e[0m rsync -vharPz SOURCE DESTINATION \n\e[0;33mLocal:\e[0m  rsync -vharP SOURCE DESTINATION"'
 
 alias oo-ip='ip addr list | grep eth0$'
 
@@ -86,24 +89,29 @@ clone () {
     git clone $url $reponame;
     cd $reponame;
 }
-
-oo-echo () {
+oo-git () {
     echo ""
-    echo "git--l = git log --graph --pretty=oneline --abbrev-commit"
-    echo "git--ll = git log --pretty=oneline --abbrev=9 -5"
-    echo "git--log = git log --pretty=oneline --abbrev-commit"
+    echo "git--i             = git status &&  echo '\\\n' && git ls-files -v | grep '^[[:lower:]]'"
+    echo "git--l             = git log --graph --pretty=oneline --abbrev-commit"
+    echo "git--ll            = git log --pretty=oneline --abbrev=9 -15"
+    echo "git--log           = git log --pretty=oneline --abbrev-commit"
     echo "git--log-cant-user = git shortlog -s -n"
-    echo "git--unpush = git log origin/master..HEAD --oneline"
-    echo "git--unpull = git log HEAD..origin/master --oneline"
-    echo "git--lme = git log --merges --oneline -20"
-    echo "git--lstat = git log --pretty=format:'%h - %ar - %an, : %s' -30"
-    echo "git--count-b-ups = git log HEAD..upstream/master --oneline | wc -l "
+    echo "git--unpush        = git log origin/master..HEAD --oneline"
+    echo "git--unpull        = git log HEAD..origin/master --oneline"
+    echo "git--lme           = git log --merges --oneline -20"
+    echo "git--lstat         = git log --pretty=format:'%h - %ar - %an, : %s' -30"
+    echo "git--count-b-ups   = git log HEAD..upstream/master --oneline | wc -l "
 }
 
+oo-git-i-help () {
+    echo "git update-index --assume-unchanged <filename>"
+    echo ""
+    echo "git update-index --no-assume-unchanged <filename>"
+}
 
-
+alias git--i="git status &&  echo '\n' && git ls-files -v | grep '^[[:lower:]]'"
 alias git--l="git log --graph --pretty=oneline --abbrev-commit --abbrev=9"
-alias git--ll="git log --pretty=oneline --abbrev=9 -5"
+alias git--ll="git log --pretty=oneline --abbrev=9 -15"
 alias git--log="git log --pretty=oneline --abbrev-commit --abbrev=9 $1"
 alias git--log-cant-user="git shortlog -s -n"
 alias git--unpush="git log origin/master..HEAD --oneline"
@@ -306,3 +314,9 @@ color () {
     echo -e "\e[0;30m█████\\e[0m\e[0;31m█████\\e[0m\e[0;32m█████\\e[0m\e[0;33m█████\\e[0m\e[0;34m█████\\e[0m\e[0;35m█████\\e[0m\e[0;36m█████\\e[0m\e[0;37m█████\\e[0m"
     echo -e "\e[0m\e[1;30m█████\\e[0m\e[1;31m█████\\e[0m\e[1;32m█████\\e[0m\e[1;33m█████\\e[0m\e[1;34m█████\\e[0m\e[1;35m█████\\e[0m\e[1;36m█████\\e[0m\e[1;37m█████\\e[0m"
 }
+
+# |::::::::::::: alias ::::::::::::::<<<
+PATH="$HOME/.local/bin:$PATH"
+
+# |::::::::::::: Disable Ansible Cow ::::::::::::::<<<
+export ANSIBLE_NOCOWS=1

@@ -3,21 +3,20 @@ Bash
 
 
 ```sh
-    #!/bin/bash
+#!/bin/bash
 
-    # | Script Path
-    SCRIPT_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-    SCRIPT_PATH="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+# | Script Path
+SCRIPT_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+SCRIPT_PATH="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
-    # | Script Path Folder
-    SCRIPT_DIR=`basename $SCRIPT_PATH`
+# | Script Path Folder
+SCRIPT_DIR=`basename $SCRIPT_PATH`
 
-    # | Path from excute
-    PWD="$(pwd)"
+# | Path from excute
+PWD="$(pwd)"
 
-    # | Path from excute
-    PWD_FOLDER=${PWD##*/}
-
+# | Path from excute
+PWD_FOLDER=${PWD##*/}
 ```
 
 ## Colors
@@ -36,15 +35,19 @@ CYAN="\e[0;36m"
 WHITE="\e[0;37m"
 ```
 
-## Insert in file
+## Insert text in file
 
 ```sh
-    echo "replSet=001-rs" >> /etc/mongod.conf
-```
+# At the end
+$ echo "TEXT_TO_INSERT" >> ./myfile.txt
+$ sudo sh -c "TEXT_TO_INSERT' >> ./myfile.txt"
 
-## Find and replace in file
+# Replace all
+$ echo "TEXT_TO_INSERT" > ./myfile.txt
+$ sudo sh -c "TEXT_TO_INSERT' > ./myfile.txt"
 
-```sh
+
+#
 cat >> PATH/TO/FILE << "EOF"
 {
   "apps": [{
@@ -64,10 +67,16 @@ cat >> PATH/TO/FILE << "EOF"
 EOF
 ```
 
+## Find and replace in file
+
+```sh
+find "/FOLDER_PATH/" -name "FILE.php" -exec sed -ie "s/SEARCH/REPLACE/g" "{}" \;
+```
+
 ## Replace in file
 
 ```bash
-    sed -i "s/bind_ip = 127.0.0.1/bind_ip = 0.0.0.0/" /etc/mongod.conf
+sed -i "s/SEARCH/REPLACE/" ./myfile.txt
 ```
 
 ## Count file with jquery

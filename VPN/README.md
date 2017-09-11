@@ -109,12 +109,13 @@ https://github.com/Nyr/openvpn-install
 https://pritunl.com/
 
 ```bash
-$ sudo nano /etc/apt/sources.list.d/pritunl.list
+sudo tee -a /etc/apt/sources.list.d/pritunl.list << EOF
 deb http://repo.pritunl.com/stable/apt xenial main
+EOF
 
-$ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv 7568D9BB55FF9E5287D586017AE645C0CF8E292A
-$ sudo apt update
-$ sudo apt install pritunl-client-gtk
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv 7568D9BB55FF9E5287D586017AE645C0CF8E292A && \
+sudo apt-get update && \
+sudo apt-get install pritunl-client-gtk
 ```
 
 - **Import File to client**
